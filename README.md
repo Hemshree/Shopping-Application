@@ -1,2 +1,2 @@
 # Shopping-Application
-It is an online shopping application made using Flutter framework.
+It is an online shopping application made using Flutter.
