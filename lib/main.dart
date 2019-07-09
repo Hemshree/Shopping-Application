@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
+import './pages/addproduct.dart';
 
 import './widgets/Categories.dart';
 import './widgets/cart.dart';
@@ -31,9 +32,14 @@ class _HomePageState extends State<HomePage> {
         dotColor : Colors.teal,
         dotSize : 7,
         images : [
-          AssetImage('assets/images/s1.jpg'),
-          AssetImage('assets/images/s2.jpg'),
-          AssetImage('assets/images/s3.jpg'),
+//          AssetImage('assets/images/s1.jpg'),
+//          AssetImage('assets/images/s2.jpg'),
+//          AssetImage('assets/images/s3.jpg'),
+        NetworkImage('https://images.pexels.com/photos/1345082/pexels-photo-1345082.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'),
+          NetworkImage('https://image.shutterstock.com/image-photo/young-happy-summer-shopping-woman-260nw-611719892.jpg'),
+          NetworkImage('https://static.toiimg.com/photo/59632433/.jpg'),
+
+
         ],
 
       ),
@@ -95,10 +101,25 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             InkWell(
+              onTap: (
+
+                  ) {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> AddProduct()));
+              },
+              child: ListTile(
+                title: Text('Add Product'),
+                leading: Icon(
+                  Icons.shopping_cart,
+                  color: Colors.teal,
+                ),
+              ),
+            ),
+            InkWell(
               onTap: () {},
               child: ListTile(
                 title: Text('Orders'),
                 leading: Icon(
+
                   Icons.shopping_basket,
                   color: Colors.teal,
                 ),
